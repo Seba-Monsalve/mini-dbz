@@ -6,7 +6,7 @@ interface Props {
 }
 export const CharacterCard = ({ character }: Props) => {
 
-    const { image, affiliation, name, ki, maxKi, race, gender, description, } = character
+    const { image, affiliation, name, ki, race, gender } = character
     return (
         <div className= "group [&:not(:hover)]:text-gray-600 flex flex-col items-center justify-center bg-black transition-all   h-[440px] w-[150px] border-2 hover:scale-110  rounded-xl hover:w-1/3 overflow-hidden  hover:cursor-pointer">
             <img className=" transition-all  object-cover  h-[300px] overflow-hidden" src={image} alt="" />

@@ -6,7 +6,7 @@ interface Props {
 }
 export const WorldCard = ({ world }: Props) => {
 
-    const { description, image, name, isDestroyed } = world
+    const {  image, name, isDestroyed } = world
     return (
         <div className="flex flex-col flex-wrap items-center justify-center rounded-xl bg-black px-1 py-2  border-2 transition-all 
         hover:scale-x-125 hover:scale-y-110 hover:cursor-pointer">

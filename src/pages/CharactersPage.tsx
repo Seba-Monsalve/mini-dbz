@@ -7,7 +7,7 @@ import { CharacterList } from '../components/CharacterList';
 export const CharactersPage = () => {
 
     
-  const {asc,filters,characters,orderBy,setOrderBy,setCharacters} = useStore();
+  const {asc,filters,characters,orderBy,setCharacters} = useStore();
 
   useEffect(() => {
     getData('characters',10).then(a => setCharacters(a.items))

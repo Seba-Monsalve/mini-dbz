@@ -17,15 +17,15 @@ export const CharacterList = ({ filters, characters, order, asc }:Props) => {
             {
                 characters.filter(c => {
                     for (let key in filters) {
-                        if ((c[key] === undefined || c[key] !== filters[key])) {
+                        if ((c[key as keyof Character] === undefined || c[key  as keyof Character] !== filters[key])) {
                             return false
                         }
                     }
                     return true
                 }
                 ).sort((a, b) => {
-                    if (a[order] < b[order]) return -1 * asc
-                    if (a[order] > b[order]) return 1 * asc
+                    if (a[order  as keyof Character] < b[order as keyof Character]) return -1 * asc
+                    if (a[order  as keyof Character] > b[order as keyof Character]) return 1 * asc
                     return 0
                 }
                 ).map(character =>
@@ -35,7 +35,7 @@ export const CharacterList = ({ filters, characters, order, asc }:Props) => {
             {
                 characters.filter(c => {
                     for (let key in filters) {
-                        if ((c[key] === undefined || c[key] !== filters[key])) {
+                        if ((c[key as keyof Character] === undefined || c[key as keyof Character] !== filters[key])) {
                             return false
                         }
                     }
